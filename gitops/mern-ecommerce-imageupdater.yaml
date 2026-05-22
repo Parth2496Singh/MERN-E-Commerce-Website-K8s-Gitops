@@ -1,0 +1,15 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+metadata:
+  name: mern-ecommerce-image-updater
+  namespace: argocd
+spec:
+  applicationRefs:
+    - namePattern: "mern-ecommerce-app"
+      writeBackConfig:
+        method: "git"
+      images:
+        - alias: "backend"
+          imageName: "parthsingh2496/mern-ecommerce-backend"
+        - alias: "frontend"
+          imageName: "parthsingh2496/mern-ecommerce-frontend"
