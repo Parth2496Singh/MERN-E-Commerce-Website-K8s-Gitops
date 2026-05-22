@@ -4,5 +4,5 @@ helm:
     value: parthsingh2496/mern-ecommerce-frontend
     forcestring: true
   - name: image.tag
-    value: v1.0.9
+    value: v1.0.10
     forcestring: true
